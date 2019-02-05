@@ -18,6 +18,11 @@
   color: white;
 }
 
+.completed{
+  text-decoration: underline;
+  color:yellow;
+}
+
 .App-link {
   color: #61dafb;
 }
