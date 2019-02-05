@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import bindFunc from '../util.js'
 class ToDoItem extends Component {
 
     constructor(props) {
         super(props);
-        this.renderForm = this.renderForm.bind(this);
-        this.renderItem = this.renderItem.bind(this);
-        this.toggleState = this.toggleState.bind(this);
-        this.updateItem = this.updateItem.bind(this);
+        // this.renderForm = this.renderForm.bind(this);
+        // this.renderItem = this.renderItem.bind(this);
+        // this.toggleState = this.toggleState.bind(this);
+        // this.updateItem = this.updateItem.bind(this);
+        bindFunc.call(this,['renderForm','renderItem','toggleState','updateItem'])
         this.state = {
             isEditing: false,
         }

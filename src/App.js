@@ -6,17 +6,18 @@ import './App.css';
 import { BrowserRouter as Router,Route,Link } from 'react-router-dom';
 import HomePage from './component/HomePage';
 import ToDoList from './component/ToDoList';
-
+import bindFunc from './util.js'
 class App extends Component {
 
   constructor() {
     console.log("Constructor");
     super();
-    this.changeStatus = this.changeStatus.bind(this);
-    this.updateName = this.updateName.bind(this);
-    this.addName = this.addName.bind(this);
-    this.deleteName = this.deleteName.bind(this);
-    this.updateByName = this.updateByName.bind(this);
+    // this.changeStatus = this.changeStatus.bind(this);
+    // this.updateName = this.updateName.bind(this);
+    // this.addName = this.addName.bind(this);
+    // this.deleteName = this.deleteName.bind(this);
+    // this.updateByName = this.updateByName.bind(this);
+    bindFunc.call(this,['changeStatus','updateName','addName','deleteName','updateByName']);
     this.state = {
       names: [
         {
